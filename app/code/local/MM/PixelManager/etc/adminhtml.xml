@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <cms>
+            <children>
+                <mm_pixelmanager translate="title" module="mm_pixelmanager">
+                    <title>Pixel Manager</title>
+                    <sort_order>100</sort_order>
+                    <action>adminhtml/pixelmanager_pixel</action>
+                </mm_pixelmanager>
+            </children>
+        </cms>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <dashboard>
+                        <children>
+                            <mm_pixelmanager module="advd">
+                                <title>MM Pixel Manager</title>
+                                <sort_order>10</sort_order>
+                                <children>
+                                    <actions module="advd">
+                                        <title>Actions</title>
+                                        <sort_order>10</sort_order>
+                                        <children>
+                                            <manage module="advd">
+                                                <title>Manage</title>
+                                                <sort_order>10</sort_order>
+                                            </manage>
+                                        </children>
+                                    </actions>
+                                </children>
+                            </mm_pixelmanager>
+                        </children>
+                    </dashboard>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
